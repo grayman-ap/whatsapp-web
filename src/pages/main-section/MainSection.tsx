@@ -1,8 +1,8 @@
-import React from "react";
+import {FaLock} from '../../utils/icon'
 import { starter } from "../../assets";
 function MainSection() {
   return (
-    <div className="flex justify-center items-center h-[100%]">
+    <div className="relative flex justify-center items-center h-[100%]">
       <div className="flex flex-col items-center justify-center w-[50%]">
         <img src={starter} alt="starter" className="w-[100%] p-10" />
       <div className="text-white text-center space-y-1">
@@ -18,6 +18,10 @@ function MainSection() {
           </p>
         </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 mb-10 flex items-center space-x-1 text-textPrimary/50">
+        <div className="flex items-baseline text-[9px]"><FaLock /></div>
+        <p className='text-[13px] font-light'>End to end encryption</p>
       </div>
     </div>
   );

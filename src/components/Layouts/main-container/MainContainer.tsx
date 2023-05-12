@@ -9,7 +9,7 @@ const MainContainer = () => {
       <div className="bg-primary w-[30%] border-r border-light">
         <ChatSideBar />
       </div>
-      <div className="bg-secondary w-[70%]">
+      <div className="bg-secondary w-[70%] border-b-[7px] border-mainGreen">
         <MainSection />
       </div>
     </div>
