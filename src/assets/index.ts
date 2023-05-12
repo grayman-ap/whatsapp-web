@@ -1,0 +1,1 @@
+export {default as starter} from '../assets/starter.png'
