@@ -2,12 +2,12 @@ import {FaLock} from '../../utils/icon'
 import { starter } from "../../assets";
 function MainSection() {
   return (
-    <div className="relative flex justify-center items-center h-[100%]">
-      <div className="flex flex-col items-center justify-center w-[50%]">
+    <div className="relative flex justify-center items-center h-[95%]">
+      <div className="flex flex-col items-center justify-center md:w-[50%] w-[90%]">
         <img src={starter} alt="starter" className="w-[100%] p-10" />
       <div className="text-white text-center space-y-1">
         <div>
-          <h2 className="my-2 text-[32px] font-light text-textPrimary">
+          <h2 className="my-2 text-[28px] md:text-[32px] font-light text-textPrimary">
             Whatsapp Web
           </h2>
         </div>
@@ -19,7 +19,7 @@ function MainSection() {
         </div>
         </div>
       </div>
-      <div className="absolute bottom-0 mb-10 flex items-center space-x-1 text-textPrimary/50">
+      <div className="absolute bottom-0  w-full justify-center flex items-center space-x-1 text-textPrimary/50">
         <div className="flex items-baseline text-[9px]"><FaLock /></div>
         <p className='text-[13px] font-light'>End to end encryption</p>
       </div>

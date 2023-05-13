@@ -1,1 +1,8 @@
 export {default as starter} from '../assets/starter.png'
+export {default as team1} from '../assets/team-01.jpg'
+export {default as team2} from '../assets/team-02.jpg'
+export {default as team3} from '../assets/team-03.jpg'
+export {default as team4} from '../assets/team-04.jpg'
+export {default as team5} from '../assets/team-05.jpg'
+export {default as team6} from '../assets/passport.jpeg'
+export {default as userProfile} from '../assets/3551739.jpg'

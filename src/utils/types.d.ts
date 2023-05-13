@@ -8,7 +8,7 @@ export interface IconButtonProps {
 
   //user chat tab
   export interface UserSideBarProps{
-    id:1,
+    id:number,
     profileImage:React.ReactNode | any,
     userName: string,
     lastUser: string,
