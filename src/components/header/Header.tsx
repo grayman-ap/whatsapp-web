@@ -1,5 +1,5 @@
 import { Avatar,IconButton } from "@mui/material";
-import { FaUsers,MdMessage, BsThreeDotsVertical, MdDataUsage, TbCircleDashed} from "../../utils/icon";
+import { FaUsers,MdMessage, BsThreeDotsVertical, TbCircleDashed} from "../../utils/icon";
 function Header() {
   const iconButton = `text-textPrimary text-[20px]`
   return (

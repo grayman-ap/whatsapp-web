@@ -5,6 +5,16 @@ import { MdOutlineSearch, BiFilter } from "../../utils/icon";
 function ChatSideBar() {
   const [active, setActive] = useState<number>();
   const [activeState, setActiveState] = useState<boolean>();
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value.toLowerCase());
+  };
+
+  const filteredUsers = searchQuery
+    ? UserSideBar.filter(user => user.userName.toLowerCase().includes(searchQuery))
+    : UserSideBar;
+
   return (
     <section>
       {/* header section */}
@@ -47,6 +57,7 @@ function ChatSideBar() {
             <input
               type="text"
               placeholder="Search or start new chat"
+              onChange={handleSearch}
               className="bg-transparent w-[90%] rounded focus:outline-none placeholder:text-[13px] placeholder:font-light"
             />
           </div>
@@ -58,14 +69,25 @@ function ChatSideBar() {
         </div>
       </div>
       {/* user section */}
-      <div>
-        <div>
-          {UserSideBar.map((user, index) => (
-            <div key={index}>
-              <div>
-                <img src={user.profileImage} alt="profileImage" className="" />
+      <div className="h-[100vh] mx-auto my-5">
+        <div className="flex flex-col overflow-scroll h-[90%] text-white">
+        {filteredUsers.map((user, index) => (
+            <div key={index} className="flex  py-1 hover:bg-light/80">
+              <div className="w-[15%] flex items-center justify-center">
+                {user.profileImage} 
               </div>
-              <div></div>
+              <div className="w-[95%] mx-3">
+                <div className="flex justify-between items-center ">
+                  <h3>{user.userName}</h3>
+                  <div className="text-[12px] font-bold text-textPrimary/60">{user.localeTime}</div>
+                </div>
+                <div className="flex justify-between items-center" >
+                  <p  className="text-[15px]">~{user.lastUser}</p>
+                  <div className="rounded-full p-1 w-[8%] text-[10px] bg-mainGreen text-center">{user.chatNumber}</div>
+                </div>
+                <div className="w-full h-[1px] bg-light mt-5">
+                  </div>
+              </div>
             </div>
           ))}
         </div>
