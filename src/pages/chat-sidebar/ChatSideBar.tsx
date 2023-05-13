@@ -2,7 +2,7 @@ import { Avatar } from "@mui/material";
 import { useState } from "react";
 import { IconButton, UserSideBar } from "../../utils/fakedata";
 import { MdOutlineSearch, BiFilter, FaLock } from "../../utils/icon";
-import { team4, userProfile } from "../../assets";
+import { team4} from "../../assets";
 function ChatSideBar() {
   const [active, setActive] = useState<number>(1);
   const [activeState, setActiveState] = useState<boolean>(false);
@@ -63,7 +63,17 @@ function ChatSideBar() {
             />
           </div>
           <div className="rounded-full p-1.5 cursor-pointer">
-            <div className="text-textPrimary/60 text-[22px]">
+            <div
+                  className={`${
+                   activeState
+                      ? "bg-white/5 animate-pulse"
+                      : ""
+                  } rounded-full p-[10px] cursor-pointer transition-all ease-in-out duration-150 text-textPrimary/60 text-[22px]`}
+                  onClick={() => {
+     
+                    setActiveState(true);
+                  }}
+                >
               <BiFilter />
             </div>
           </div>
